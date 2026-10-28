@@ -1,40 +1,69 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    padding: 20px;
-}
-
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-figure {
-    background: white;
     margin: 0;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+    min-height: 100vh;
+    background-color: #e2e8f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+.exploration-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-figure:hover img {
-    transform: scale(1.1);
+/* Common box visual representation layers */
+.box {
+    width: 260px;
+    height: 160px;
+    /* Margin Layer (Outermost) */
+    margin: 20px;
+    /* Border Layer */
+    border: 8px solid #3b82f6;
+    /* Padding Layer */
+    padding: 25px;
+    background-color: #93c5fd; /* Padding area background */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    outline: 4px dashed #ef4444; /* Represents Margin boundary outline */
+    outline-offset: 12px;
 }
 
-figcaption {
-    padding: 10px;
+/* Default Box Model behavior (content-box) */
+.default-model {
+    box-sizing: content-box; 
+}
+
+/* Border-box behavior */
+.border-box-model {
+    box-sizing: border-box; 
+    background-color: #fde047;
+    border-color: #ca8a04;
+}
+
+/* Content Area Layer (Innermost) */
+.inner-content {
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1e293b;
     font-size: 14px;
-    color: #333;
+}
+
+.layer-label {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0f172a;
+    background: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
 }

@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage - Q3</title>
+    <title>Gradient Webpage - Q3</title>
     <link rel="stylesheet" href="q3.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <h1>CSS Gradients Showcase</h1>
     </header>
 
-    <main class="main-area">
-        <div class="box">Services</div>
-        <div class="box">Projects</div>
-        <div class="box">Contact</div>
+    <!-- Main Content Area -->
+    <main class="content-wrapper">
+        <section class="gradient-section linear-section">
+            <h2>Linear Gradient Section</h2>
+            <p>This section demonstrates a straight-line color transition from top-left to bottom-right using standard linear-gradient syntax[cite: 34].</p>
+        </section>
+
+        <section class="gradient-section radial-section">
+            <h2>Radial Gradient Section (Parallax-like Effect)</h2>
+            <p>This section uses a radial gradient spreading outward from the center[cite: 37] with <code>background-attachment: fixed;</code>.</p>
+        </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Company Website</p>
+    <!-- Fixed Footer -->
+    <footer class="fixed-footer">
+        <p>&copy; 2026 Gradient Design Layout</p>
     </footer>
 </body>
 </html>
