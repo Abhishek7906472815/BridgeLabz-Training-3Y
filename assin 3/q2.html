@@ -1,0 +1,54 @@
+<!-- q02_product_catalog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Catalog</title>
+</head>
+<body>
+  <h1>Online Store - Product Catalog</h1>
+
+  <table border="1" cellpadding="8">
+    <caption>Available Products</caption>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Category row using colspan -->
+      <tr>
+        <th colspan="5">Electronics</th>
+      </tr>
+      <tr>
+        <td><img src="laptop.jpg" alt="Laptop" width="80"></td>
+        <td>Laptop</td>
+        <td>15 inch, 16GB RAM</td>
+        <td>Rs. 55,000</td>
+        <!-- rowspan: same availability for two products -->
+        <td rowspan="2">In Stock</td>
+      </tr>
+      <tr>
+        <td><img src="phone.jpg" alt="Phone" width="80"></td>
+        <td>Smartphone</td>
+        <td>6.5 inch display, 128GB</td>
+        <td>Rs. 20,000</td>
+      </tr>
+      <tr>
+        <th colspan="5">Accessories</th>
+      </tr>
+      <tr>
+        <td><img src="headphones.jpg" alt="Headphones" width="80"></td>
+        <td>Headphones</td>
+        <td>Wireless, noise cancelling</td>
+        <td>Rs. 3,000</td>
+        <td>Out of Stock</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
