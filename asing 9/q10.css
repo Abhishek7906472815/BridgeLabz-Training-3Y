@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9;
+    animation: loadFade 0.8s ease-out; /* Simple load animation */
+}
+
+/* CSS Grid Dashboard Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+    min-height: 100vh;
+}
+
+.dash-header {
+    grid-area: header;
+    background-color: #0f172a;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.dash-sidebar {
+    grid-area: sidebar;
+    background-color: #1e293b;
+    padding: 20px 0;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #334155;
+    color: white;
+}
+
+.dash-content {
+    grid-area: content;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dash-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on cards */
+.dash-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.dash-card h3 {
+    margin-top: 0;
+    color: #2563eb;
+}
+
+@keyframes loadFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Below 750px: Sidebar shifts to top, content stacks below */
+@media (max-width: 750px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content";
+    }
+
+    .sidebar-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .sidebar-menu a {
+        padding: 10px;
+    }
+}
