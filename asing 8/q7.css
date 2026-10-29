@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Soft background gradient */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Card-like container aligned using Flexbox */
+.ui-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ui-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.component-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Search bar & dropdown consistent styling */
+.search-bar, .dropdown-menu {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+/* Highlight focused/hover elements using pseudo-classes */
+.search-bar:focus, .dropdown-menu:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.search-bar:hover, .dropdown-menu:hover {
+    border-color: #adb5bd;
+}
+
+/* Button styles */
+.ui-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.primary-ui {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.primary-ui:hover {
+    background-color: #357abd;
+}
+
+.secondary-ui {
+    background-color: #e4e6eb;
+    color: #4b4f56;
+}
+
+.secondary-ui:hover {
+    background-color: #d8dadf;
+}
+
+.ui-btn:active {
+    transform: scale(0.97);
+}

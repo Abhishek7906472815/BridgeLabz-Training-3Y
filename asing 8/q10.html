@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10: Mini User Interface Layout</title>
+    <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+    <div class="page-layout">
+        <!-- Header -->
+        <header class="ui-header">
+            <h2>Dashboard Portal</h2>
+        </header>
+
+        <!-- Main Content Card -->
+        <main class="ui-main-card">
+            <div class="card-header-section">
+                <img src="https://picsum.photos/id/64/80/80" alt="User Avatar" class="mini-avatar">
+                <div>
+                    <h3>Welcome back, User</h3>
+                    <p>Please update your account preferences below.</p>
+                </div>
+            </div>
+
+            <form class="ui-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-action primary-action">Save Changes</button>
+                    <button type="button" class="btn-action secondary-action">Cancel</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="ui-footer">
+            <p>&copy; 2026 Mini UI Layout Component. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

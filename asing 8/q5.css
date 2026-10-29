@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafbfc;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-showcase {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Flexbox alignment with consistent spacing */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* Base button styles */
+.btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 12px rgba(0,123,255,0.3);
+}
+.btn-primary:active {
+    transform: translateY(1px);
+}
+.btn-primary:focus {
+    outline: 3px solid rgba(0,123,255,0.4);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+    box-shadow: 0 5px 12px rgba(108,117,125,0.3);
+}
+.btn-secondary:active {
+    transform: translateY(1px);
+}
+.btn-secondary:focus {
+    outline: 3px solid rgba(108,117,125,0.4);
+}
+
+/* Outline Button */
+.btn-outline {
+    background-color: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+.btn-outline:hover {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 5px 12px rgba(40,167,69,0.3);
+}
+.btn-outline:active {
+    transform: translateY(1px);
+}
+.btn-outline:focus {
+    outline: 3px solid rgba(40,167,69,0.4);
+}
+
+/* Disabled Button state */
+.btn-disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.btn-disabled:hover, .btn-disabled:active {
+    transform: none;
+    background-color: #e9ecef;
+}

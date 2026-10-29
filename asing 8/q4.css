@@ -1,0 +1,93 @@
+/* General page setup with proper spacing */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header, .site-footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-wrapper {
+    flex: 1;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.selector-section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- CSS SELECTOR RULES WITH DESCRIPTIVE COMMENTS --- */
+
+/* 1. Element Selector: Targets all <p> elements globally */
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* 2. Class Selector: Targets elements with class 'intro-text' */
+.intro-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* 3. ID Selector: Targets the unique element with id 'unique-box' */
+#unique-box {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-left: 4px solid #28a745;
+    margin-bottom: 10px;
+}
+
+/* 4. Attribute Selector: Targets inputs specifically matching type="email" */
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 5. Descendant Selector (Space): Targets <p> elements anywhere inside .combinator-container */
+.combinator-container p {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* 6. Child Selector (>): Targets direct <li> children of <ul> inside container */
+.combinator-container ul > li {
+    background-color: #e9ecef;
+    margin: 4px 0;
+    padding: 4px 8px;
+    list-style-type: square;
+}
+
+/* 7. Adjacent Sibling Selector (+): Targets immediate <p> following .combinator-container */
+.combinator-container + .sibling-target {
+    background-color: #fff3cd;
+    padding: 8px;
+    border: 1px solid #ffeeba;
+}
+
+/* 8. General Sibling Selector (~): Targets all sibling <p> elements after selector match */
+.sibling-target ~ .sibling-general {
+    background-color: #f8d7da;
+    padding: 8px;
+    border: 1px solid #f5c6cb;
+}
