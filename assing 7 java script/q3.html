@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f2f5; }
+        .form-container { max-width: 400px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .step { display: none; }
+        .step.active { display: block; }
+        .field-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 5px; font-size: 13px; }
+        input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .error { color: #dc3545; font-size: 12px; margin-top: 4px; display: none; }
+        .btn-container { display: flex; justify-content: space-between; margin-top: 20px; }
+        button { padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        button.secondary { background: #6c757d; }
+        button.secondary:hover { background: #5a6268; }
+        #summaryBox { background: #e9ecef; padding: 15px; border-radius: 4px; font-family: monospace; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form id="multiStepForm" novalidate>
+        
+        <!-- Step 1: Name -->
+        <div class="step active" data-step="1">
+            <h3>Step 1: Personal Info</h3>
+            <div class="field-group">
+                <label for="userName">Full Name</label>
+                <input type="text" id="userName" placeholder="Enter your full name">
+                <span class="error" id="nameError">Name cannot be empty.</span>
+            </div>
+            <div class="btn-container">
+                <div></div> <!-- Spacer -->
+                <button type="button" id="next1">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Email -->
+        <div class="step" data-step="2">
+            <h3>Step 2: Contact Details</h3>
+            <div class="field-group">
+                <label for="userEmail">Email Address</label>
+                <input type="email" id="userEmail" placeholder="name@example.com">
+                <span class="error" id="emailError">Please enter a valid email address.</span>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="secondary" id="back2">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Password -->
+        <div class="step" data-step="3">
+            <h3>Step 3: Security</h3>
+            <div class="field-group">
+                <label for="userPassword">Password</label>
+                <input type="password" id="userPassword" placeholder="Minimum 6 characters">
+                <span class="error" id="passwordError">Password must be at least 6 characters.</span>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="secondary" id="back3">Back</button>
+                <button type="submit" id="submitBtn">Submit & Finish</button>
+            </div>
+        </div>
+
+        <!-- Summary View -->
+        <div class="step" data-step="4">
+            <h3>🎉 Registration Complete!</h3>
+            <p>Review your submitted details below:</p>
+            <div id="summaryBox"></div>
+        </div>
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

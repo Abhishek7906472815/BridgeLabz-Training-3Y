@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Theme Switcher</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; transition: background 0.3s, color 0.3s; }
+        .card { padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        .btn-group { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+        button { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+        /* Theme Styles via Body Attributes & Classes */
+        body[data-theme="light"] { background-color: #ffffff; color: #212529; }
+        body[data-theme="light"] .card { background-color: #f8f9fa; border: 1px solid #dee2e6; }
+
+        body[data-theme="dark"] { background-color: #121212; color: #e0e0e0; }
+        body[data-theme="dark"] .card { background-color: #1e1e1e; border: 1px solid #333; }
+
+        body[data-theme="blue"] { background-color: #e3f2fd; color: #0d47a1; }
+        body[data-theme="blue"] .card { background-color: #bbdefb; border: 1px solid #90caf9; }
+    </style>
+</head>
+<body data-theme="light" class="theme-light">
+
+<div class="card">
+    <h2>Dynamic Theme Switcher</h2>
+    <p>Select your preferred color scheme below:</p>
+    <div class="btn-group">
+        <button id="lightBtn" style="background: #f8f9fa; color: #333; border: 1px solid #ccc;">Light</button>
+        <button id="darkBtn" style="background: #333; color: #fff;">Dark</button>
+        <button id="blueBtn" style="background: #2196f3; color: #fff;">Blue</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

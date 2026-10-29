@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown Component</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background: #f9f9f9; }
+        .custom-dropdown { position: relative; width: 220px; }
+        .dropdown-btn { width: 100%; padding: 10px 15px; background: #ffffff; border: 1px solid #ccc; border-radius: 4px; text-align: left; cursor: pointer; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
+        .dropdown-btn::after { content: "▼"; font-size: 10px; color: #666; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #ffffff; border: 1px solid #ccc; border-radius: 4px; margin-top: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 10; list-style: none; padding: 0; }
+        .dropdown-menu.open { display: block; }
+        .dropdown-item { padding: 10px 15px; cursor: pointer; font-size: 14px; }
+        .dropdown-item:hover { background: #f1f3f5; }
+    </style>
+</head>
+<body>
+
+<div class="custom-dropdown" id="customDropdown">
+    <button type="button" class="dropdown-btn" id="dropdownBtn">Select Option...</button>
+    <ul class="dropdown-menu" id="dropdownMenu">
+        <li class="dropdown-item" data-value="frontend">Frontend Developer</li>
+        <li class="dropdown-item" data-value="backend">Backend Engineer</li>
+        <li class="dropdown-item" data-value="fullstack">Full Stack Specialist</li>
+        <li class="dropdown-item" data-value="devops">DevOps Specialist</li>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

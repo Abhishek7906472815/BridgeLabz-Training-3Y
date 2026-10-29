@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submit Blocker & Live Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f7f9fa; }
+        .form-card { max-width: 400px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: auto; }
+        .group { margin-bottom: 15px; display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 5px; font-size: 13px; }
+        input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        input.invalid { border-color: #dc3545; }
+        input.valid { border-color: #28a745; }
+        .error-text { color: #dc3545; font-size: 11px; margin-top: 3px; display: none; }
+        .success-banner { background: #d4edda; color: #155724; padding: 12px; border-radius: 4px; text-align: center; font-weight: bold; display: none; margin-bottom: 15px; }
+        button { background: #28a745; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2>User Registration Form</h2>
+    <div id="successBanner" class="success-banner">Form Submitted Successfully!</div>
+
+    <form id="regForm" novalidate>
+        <div class="group">
+            <label for="fullName">Name (Required)</label>
+            <input type="text" id="fullName" placeholder="Enter your name">
+            <span class="error-text" id="nameErrorMsg">Name field cannot be blank.</span>
+        </div>
+
+        <div class="group">
+            <label for="regEmail">Email (Required, must contain @)</label>
+            <input type="text" id="regEmail" placeholder="name@domain.com">
+            <span class="error-text" id="emailErrorMsg">Email must contain an '@' symbol.</span>
+        </div>
+
+        <div class="group">
+            <label for="regPass">Password (Min 6 chars)</label>
+            <input type="password" id="regPass" placeholder="At least 6 characters">
+            <span class="error-text" id="passErrorMsg">Password must be at least 6 characters long.</span>
+        </div>
+
+        <button type="submit" id="submitButton">Submit Form</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

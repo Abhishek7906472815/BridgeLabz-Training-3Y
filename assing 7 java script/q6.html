@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Table Filter</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
+        .container { max-width: 600px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: auto; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 12px; border-bottom: 1px solid #dee2e6; }
+        th { background-color: #f1f3f5; }
+        .no-results { text-align: center; color: #dc3545; font-weight: bold; padding: 20px; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Directory Filter</h2>
+    <input type="text" id="searchInput" placeholder="Search by name, branch, or CGPA...">
+    
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>CGPA</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr><td>Aakash Sharma</td><td>Computer Science</td><td>8.9</td></tr>
+            <tr><td>Priya Patel</td><td>Information Tech</td><td>9.2</td></tr>
+            <tr><td>Rahul Verma</td><td>Electronics</td><td>7.8</td></tr>
+            <tr><td>Sneha Gupta</td><td>Mechanical</td><td>8.4</td></tr>
+            <tr><td>Vikram Singh</td><td>Computer Science</td><td>9.1</td></tr>
+        </tbody>
+    </table>
+    <div id="noResultsMsg" class="no-results">No results found</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

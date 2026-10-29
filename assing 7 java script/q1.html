@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product List Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
+        .container { max-width: 450px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        input[type="text"] { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        ul { list-style-type: none; padding: 0; }
+        li { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f1f3f5; margin-bottom: 8px; border-radius: 4px; }
+        .product-name { flex: 1; outline: none; }
+        .product-name[contenteditable="true"] { background: #fff; padding: 2px 5px; border: 1px dashed #007bff; }
+        .btn-group { display: flex; gap: 5px; }
+        .edit-btn { background: #ffc107; color: #212529; }
+        .delete-btn { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Product Manager</h2>
+    <div class="input-group">
+        <input type="text" id="productInput" placeholder="Enter product name...">
+        <button id="addProductBtn">Add Product</button>
+    </div>
+    <ul id="productList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
